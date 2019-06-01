@@ -1,0 +1,418 @@
+body {
+ background-image: url(omslag1.jpg);
+ background-size: 100vw 100vh;
+ background-repeat: no-repeat;
+}
+
+p {
+  width: 30rem;
+  font-family: serif;
+  text-align: inherit;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+header{
+  padding: 3rem;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+header h1 {
+  color: white;
+  text-align: right;
+  font-size: 1rem;
+  font-family: gill-sans-nova-inline,sans-serif;
+}
+.menu img{
+  display: inline;
+  height: 2rem;
+  position: fixed;
+	top: 2rem;
+	left: 2rem;
+}
+.menu2 img{
+  display: inline;
+  height: 2rem;
+  position: fixed;
+	top: 2rem;
+	left: 2rem;
+}
+
+.blauw {
+  height: 100vh;
+  width: 100vw;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0,0,255,0.5);
+  filter: opacity(0%);
+  animation-name: blue;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes blue {
+      100% {
+            filter: opacity(100%);
+      }
+
+}
+
+nav.onzichtbaar {
+	display: none;
+}
+li a {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-family: sans-serif;
+  line-height: 3rem;
+}
+ul {
+  margin-top: 2rem;
+  padding-bottom: 100vh;
+}
+
+.quote, .intro {
+  margin-bottom: 8rem;
+  padding: 9rem 10rem 0 10rem;
+  filter: opacity(0%);
+  animation-name: blue;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.quote img {
+  width: 20vw;
+}
+h2{
+  font-size: 3rem;
+  font-family: gill-sans-nova-inline,sans-serif;
+}
+.aanhalingsteken2 {
+  position: relative;
+  left: 20rem;
+  top: -2rem;
+}
+.quote p {
+  position: relative;
+  top: -2rem;
+  color: white;
+  margin-bottom: 20rem;
+}
+.quote a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.intro p {
+  text-align: justify;
+  color: white;
+  margin: 5rem 0 20rem 0;
+}
+.intro a {
+  color: white;
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: gill-sans-nova-inline,sans-serif;
+  margin-bottom: 3rem;
+}
+.werk, .werk2 {
+  margin: 0 6rem;
+}
+.werk div {
+  margin: 3rem 0;
+}
+.werk img {
+  width: 70vw;
+  filter: grayscale(0%);
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+.werk img:hover {
+  transform: scale(1.1);
+	transition: .5s ease-in-out;
+}
+.werk2 div {
+  margin: 3rem;
+  position: relative;
+  top: 20rem;
+}
+.werk2 img {
+  width: 70vw;
+  margin: 2rem 0;
+  filter: grayscale(0%);
+  overflow: hidden;
+}
+.werk2 p {
+  text-align: center;
+  margin: 0 auto 5rem auto;
+}
+
+.verz4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.verz4 img {
+  width: 35vw;
+}
+
+footer {
+  padding: 4rem;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+footer p {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2rem;
+}
+footer a {
+  font-weight: normal;
+  text-decoration: none;
+  color:  rgba(0, 0, 0, 0.7);
+}
+.f2 {
+  color: white;
+  padding-left: 5rem;
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 32rem) {
+    body {
+      background-image: url(omslag2.jpg);
+    }
+    .blauw {
+      background-color: rgba(0,0,255,0.7);
+    }
+    h2 {
+      color: white;
+    }
+    .quote img {
+      width: 10vw;
+      margin-bottom: 10rem;
+    }
+    .aanhalingsteken2 {
+      position: relative;
+      left: 25rem;
+      top: 0rem;
+    }
+    .werk {
+      column-count: 2;
+      column-gap: 2rem;
+      margin: 2rem;
+    }
+    .werk img {
+      width: 40vw;
+    }
+    .verz4 img {
+      width: 20vw;
+    }
+  }
+
+  @media (min-width: 42rem) {
+    .quote img {
+      width: 8vw;
+      margin: 4rem 0;
+    }
+    .aanhalingsteken2 {
+      position: relative;
+      left: 35rem;
+    }
+    .quote p {
+      margin-top:5rem;
+    }
+    .werk {
+      margin-left: 5rem;
+    }
+    footer a {
+      text-align: right;
+      margin-left: 40rem;
+    }
+  }
+
+  @media (min-width: 55rem) {
+    body {
+      background-image: url(omslag3.jpg);
+    }
+    h2 {
+      font-size: 5rem;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    header h1 {
+      font-size: 4rem;
+      color: rgba(0, 0, 0, 0.4);
+    }
+    main {
+      margin-left: 2rem;
+    }
+
+    .werk {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1rem;
+      margin-left: 10rem;
+    }
+    .werk2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-column-gap: 1rem;
+      margin-left: 10rem;
+    }
+    .werk img {
+      max-width: 22vw;
+    }
+    .werk2 img {
+      width: 25vw;
+    }
+
+    .verz4 img {
+      width: 12vw;
+    }
+    .quote img {
+      width: 8vw;
+      margin: 0;
+    }
+    footer a {
+      margin-left: 60rem;
+    }
+
+    .menu , .menu2 {
+    	display: none;
+    }
+    nav.onzichtbaar {
+      display:block;
+      width: 10rem;
+    }
+    nav {
+      width: 100%;
+    }
+    nav a {
+      display: inline;
+      line-height: 4rem;
+      color: rgba(0, 0, 0, 0.4);
+    }
+    nav a:hover {
+      text-decoration: overline;
+      color: rgba(0,0,255,0.5);
+      font-size: 2.5rem;
+    }
+
+  }
+
+  @media (min-width: 65rem) {
+    .quote {
+      margin:  0 15rem 15rem 15rem;
+    }
+    .quote h2{
+      text-align: center;
+    }
+    .quote img {
+      width: 5vw;
+      margin: 0;
+    }
+    .aanhalingsteken2 {
+      left: 70rem;
+    }
+    .eerste {
+      animation-name: schuiven;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .tiende {
+      animation-name: schuiven3;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .tweede {
+      animation-name: schuiven2;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .derde {
+      animation-name: schuiven4;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .vierde {
+      animation-name: schuiven2;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    .vijfde {
+      animation-name: schuiven;
+     	animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+
+    @keyframes schuiven {
+    	0% {
+    		transform: translate(0rem,10rem);
+    		filter: opacity(0%)
+    	}
+    	100% {
+    		transform: translate(0rem,0rem);
+    		filter: opacity(100%)
+    	}
+    }
+    @keyframes schuiven2 {
+    	0% {
+    		transform: translate(0rem,-10rem);
+    		filter: opacity(0%)
+    	}
+    	100% {
+    		transform: translate(0rem,0rem);
+    		filter: opacity(100%)
+    	}
+    }
+    @keyframes schuiven3 {
+    	0% {
+    		transform: translate(10rem,0rem);
+    		filter: opacity(0%)
+    	}
+    	100% {
+    		transform: translate(0rem,0rem);
+    		filter: opacity(100%)
+    	}
+    }
+    @keyframes schuiven4 {
+    	0% {
+    		transform: translate(-10rem,0rem);
+    		filter: opacity(0%)
+    	}
+    	100% {
+    		transform: translate(0rem,0rem);
+    		filter: opacity(100%)
+    	}
+    }
+
+    footer a {
+      margin-left: 92rem;
+    }
+
+
+  }
+
+}
